@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f508ec51-f7ba-4a36-a01d-7f86b355b2a8": {
+      "ProjectGuid": "f508ec51-f7ba-4a36-a01d-7f86b355b2a8",
+      "DisplayName": "RentACar",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@model List<RentACar.Models.Car>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Doors</th>
+                <th>Seats</th>
+                <th>Luggage</th>
+                <th>Transmission</th>
+                <th>Air Conditioning</th>
+                <th colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td><img width="70" src="~/assets/images/@item.Image" /></td>
+                    <td>@(item.Brand != null ? item.Brand.Name : "")</td>
+                    <td>@item.Model</td>
+                    <td>@item.Doors</td>
+                    <td>@item.Seats</td>
+                    <td>@item.Luggage</td>
+                    <td>@item.Transmission</td>
+                    <td>@item.AirConditioning</td>
+                    <td><a asp-controller="Car" asp-action="Edit" asp-area="Manage" asp-route-id="@item.Id" class="text-info">Edit</a></td>
+                    <td><a asp-controller="Car" asp-action="Delete" asp-area="Manage" asp-route-id="@item.Id" class="text-danger">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h1 class="display-4">Car is empty</h1>
+}
+
+

@@ -1,0 +1,153 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="~/https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/assets/css/main.css">
+    <title>Rent a Car</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid bg-light">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="~/assets/images/logo.png" alt="">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarCollapse">
+                <div class="navbar-nav ms-auto d-flex gap-3">
+                    <div class="navbar-nav d-flex gap-3">
+                        <a href="#" class="nav-item nav-link active">Home</a>
+                        <a href="#" class="nav-item nav-link">Services</a>
+                        <a href="#" class="nav-item nav-link">Vehicles</a>
+                        <a href="#" class="nav-item nav-link">Supports</a>
+                        <a href="#" class="nav-item nav-link">Clients</a>
+                        <a href="#" class="nav-item nav-link">Blog</a>
+                        <a href="#" class="nav-item nav-link">Contact Us</a>
+                    </div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a asp-controller="Dashboard" asp-action="Index" asp-area="Manage" class="nav-item nav-link">Admin</a>
+                        <a asp-controller="Auth" asp-action="SignOut" asp-area="Manage" class="nav-item nav-link">Log Out</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Dashboard" asp-action="Index" asp-area="Manage" class="nav-item nav-link">Login</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+    <footer id="contactus">
+        <div class="pt-5 container">
+            <div class="row ">
+                <div class="col-sm-6">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="600" height="500" id="gmap_canvas"
+                                    src="https://maps.google.com/maps?q=baku&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123movies</a><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 500px;
+                                    width: 600px;
+                                }
+                            </style><a href="https://www.embedgooglemap.net"></a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 500px;
+                                    width: 600px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="width: 600px; height: 500px; background-color: rgb(59, 59, 59);">
+                    <form action="post">
+                        <div class="pt-5">
+                            <input class="form-control" type="text"
+                                   style="color: gray; background: transparent; border: solid 1px gray;"
+                                   placeholder="Enter Name">
+                        </div>
+                        <div class="pt-3">
+                            <input class="form-control" type="text"
+                                   style="color: gray; background: transparent; border: solid 1px gray;"
+                                   placeholder="Email Address">
+                        </div>
+                        <div class="pt-3">
+                            <input class="form-control" type="number"
+                                   style="color: gray; background: transparent; border: solid 1px gray;"
+                                   placeholder="Phone">
+                        </div>
+                        <div class="pt-3">
+                            <textarea class="form-control" type="text"
+                                      style="color: gray; background: transparent; border: solid 1px gray;"
+                                      placeholder="Comment" rows="5"></textarea>
+                        </div>
+                        <div class="pt-3">
+                            <button type="submit"
+                                    style="color:rgb(0, 81, 255); font-weight: bold; padding: 15px 40px; background-color: white; border: none;">
+                                SUBMIT
+                                NOW
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-5">
+            <div class="row ">
+                <div class="col-sm-4 ">
+                    <div class="d-flex flex-column justify-content-sm-start">
+                        <h4>Address</h4>
+                        <p>123 Lorem Ispum 456 Sit. Atlanta Ga. 30377</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 ">
+                    <div class="d-flex flex-column justify-content-sm-start">
+                        <h4>Email</h4>
+                        <a href="mailto@gmail.com">info@company.com</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 ">
+                    <div class="d-flex flex-column justify-content-sm-start">
+                        <h4>Phone Number</h4>
+                        <p>(770) 123 4567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: rgb(235, 235, 235);">
+            <footer class="py-3 my-4 container">
+                <p class="text-center text-muted">©Copyright 2022 Rent A Car. All Rights Reserved</p>
+            </footer>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="~/assets/js/main.js"></script>
+</body>
+
+</html>

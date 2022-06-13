@@ -1,0 +1,111 @@
+.bg-img{
+    background-image: url(https://wallpapercave.com/wp/wp2707538.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+header{
+    color: white;
+}
+
+.search-form{
+    background-color: violet;
+    height: 500px;
+    width: 400px;
+}
+
+.formwrap{
+    max-width: 400px;
+    background: rgba(40, 66, 205, 0.91);
+    width: 350px;
+    padding: 30px;
+    border: 1px solid #fff;
+    bottom: -50px;
+    right: 0;
+    z-index: 1000;
+}
+
+input{
+    border-radius: 0 !important;
+}
+
+.form-group{
+    padding-top: 10px;
+}
+
+.btn{
+    background-color: yellow;
+}
+
+hr{
+    width: 70px;
+    border: 1px solid rgb(40, 66, 205);
+}
+
+i{
+    padding: 17px 17px;
+    background-color: rgb(40, 66, 205);
+    color: white;
+}
+
+#vehicles{
+    background-color: rgb(242, 246, 247);
+}
+
+#vehicles a{
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+.a-tag{
+    text-align: start;
+    padding: 18px 0;
+    width: 60%;
+}
+
+.a-tag{
+    background-color: rgb(231, 231, 231);;
+
+}
+
+.carInfo{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.carInfo li{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+
+.bookNow a{
+    padding: 15px 10px;
+    background-color: rgb(40, 66, 205);
+    color: white !important;
+    font-weight: bold
+}
+
+.tabsInfo{
+    background-color: white;
+}
+
+
+.a-tag span{
+    cursor:pointer;
+}
+
+
+.cat-img{
+    display:none;
+}
+
+.active{
+    display: block;
+}
